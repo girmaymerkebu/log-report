@@ -1,26 +1,15 @@
-schema_version = "1.1"
 artifacts = ["/app/report.json"]
 
 [task]
 name = "dynamo/log-report"
 description = "Parse an Apache-style access log into a small JSON summary report."
-keywords = ["log-parsing", "data-processing"]
 
-[[task.authors]]
-name = "Merkebu Girmay"
-email = "mtekaw@gmail.com"
 
 [metadata]
-author_name = "Merkebu Girmay"
-author_email = "mtekaw@gmail.com"
-difficulty = "easy"
 category = "data_processing_and_etl"
 subcategory = "text_processing"
-tags = ["text_processing"]
 task_objective = ["transform", "generate"]
 artifact_type = ["generated_output_artifact"]
-expert_time_estimate_min = 15.0
-junior_time_estimate_min = 45.0
 difficulty_explanation = "Parse a small access log and emit summary stats."
 solution_explanation = "Read the log, count requests and unique client IPs, and find the most-requested path."
 verification_explanation = "Parse /app/report.json and assert the exact computed values (total_requests, unique_ips, top_path) against the known contents of /app/access.log, plus key and type checks."

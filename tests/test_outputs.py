@@ -14,31 +14,31 @@ def _load():
     return json.loads(REPORT.read_text())
 
 
-def test_report_is_valid_json_object():
+def test_criterion_1_report_is_valid_json_object():
     data = _load()
     assert isinstance(data, dict), "report.json must contain a JSON object"
 
 
-def test_report_has_exact_keys():
+def test_criterion_2_report_has_exact_keys():
     data = _load()
     assert set(data.keys()) == set(EXPECTED.keys()), (
         f"expected exactly keys {sorted(EXPECTED)}, got {sorted(data.keys())}"
     )
 
 
-def test_total_requests():
+def test_criterion_3_total_requests():
     data = _load()
     assert isinstance(data["total_requests"], int)
     assert data["total_requests"] == EXPECTED["total_requests"]
 
 
-def test_unique_ips():
+def test_criterion_4_unique_ips():
     data = _load()
     assert isinstance(data["unique_ips"], int)
     assert data["unique_ips"] == EXPECTED["unique_ips"]
 
 
-def test_top_path():
+def test_criterion_5_top_path():
     data = _load()
     assert isinstance(data["top_path"], str)
     assert data["top_path"] == EXPECTED["top_path"]
