@@ -7,12 +7,12 @@ description = "Parse an Apache-style access log into a small JSON summary report
 keywords = ["log-parsing", "data-processing"]
 
 [[task.authors]]
-name = "YOUR NAME"
-email = "your@email.example"
+name = "Merkebu Girmay"
+email = "mtekaw@gmail.com"
 
 [metadata]
-author_name = "YOUR NAME"
-author_email = "your@email.example"
+author_name = "Merkebu Girmay"
+author_email = "mtekaw@gmail.com"
 difficulty = "easy"
 category = "data_processing_and_etl"
 subcategory = "text_processing"
